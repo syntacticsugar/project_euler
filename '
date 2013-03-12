@@ -21,8 +21,7 @@ def prime_collector (number)
   end
 end
 
-print prime_collector 13
-puts
+print prime_collector 5
 print @collection
 
 n = 4
@@ -32,4 +31,4 @@ while @collection.length < 10001
   n += 1
 end
 
-# puts @collection.last
+puts @collection.last
