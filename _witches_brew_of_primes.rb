@@ -1,5 +1,6 @@
 # What is the 10,001 prime number?
 # SEEDS = [2,3]
+# this is taken from 7c_raul.rb
 
 class Primes
   class << self
@@ -47,5 +48,3 @@ class Primes
   end
 end
 
-puts Primes.nth(10001)
-# this is from the def nth(n), and the answer is from line 29
