@@ -4,7 +4,8 @@
 
 class Integer
   def palindrome?
-    self.to_s == self.to_s.reverse
+    # self.to_s == self.to_s.reverse
+    to_s == to_s.reverse
   end
 end
 

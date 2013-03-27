@@ -2,7 +2,7 @@ madness=731671765313306249192251196744265747423553491949349698352031277450632623
 
 insanity = []
 
-lunacy = madness.to_s.split("").map {|char| char.to_i }
+lunacy = madness.to_s.split("").map(&:to_i)
 
 # puts lunacy.join(', ')
 
