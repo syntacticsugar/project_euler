@@ -22,7 +22,6 @@ class Integer
   end
 
   # "197"
-  #
   def rotations # ex 197.rotations = [197, 971, 719]
     array = self.to_s.split("") # ['1','9','7']
     stop = array.length
@@ -38,18 +37,9 @@ class Integer
     results
   end
 
-  def all_permutations_prime? # takes in an integer, like 73, returns true
-    permutations_array = self.to_s.split("").permutation.to_a.map { |x| x.join("") }.map(&:to_i)
-    permutations_array.all? { |x| x.prime? }
+  def circular_prime? #returns 'true' if integer is a circular prime, else 'false'
+    self.rotations.all?(&:prime?)
   end
 end
 
-class Array
-  def how_many_circular_primes
-    #(1...1e6).to_a.filter { |number| number.all_permutations_prime? }.length
-    self.find_all { |number| number.all_permutations_prime? }.length
-  end
-end
-
-(1...100).to_a.how_many_circular_primes
-#(1...1e6).to_a.how_many_circular_primes
+p 1.upto(1e6).select(&:circular_prime?).size
