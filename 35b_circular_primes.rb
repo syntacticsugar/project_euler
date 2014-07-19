@@ -42,4 +42,5 @@ class Integer
   end
 end
 
+# 'select' is another way of saying 'filter'. 'find_all" is an alias.
 p 1.upto(1e6).select(&:circular_prime?).size
